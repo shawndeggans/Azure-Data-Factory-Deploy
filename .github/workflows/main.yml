@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ adf_publish ]
   pull_request:
-    branches: [ main ]
+    branches: [ adf_publish ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -40,10 +40,10 @@ jobs:
           # Provide the name of a resource group, only required for resource Group deployments.
           resourceGroupName: 'rg-adf-test'
           # Specify the path or URL to the Azure Resource Manager template.
-          template: '/adf-dev-xfi9012/ARMTemplateForFactory.json'
+          template: './adf-dev-xfi9012/ARMTemplateForFactory.json'
           # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
           deploymentMode: Incremental
           # Specifies the name of the resource group deployment to create.
           deploymentName: adf-deploy
           # Supply deployment parameter values.
-          parameters: '/adf-dev-xfi9012/ARMTemplateParametersForFactory.json'
+          parameters: './adf-dev-xfi9012/ARMTemplateParametersForFactory.json'
