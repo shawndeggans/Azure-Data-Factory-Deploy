@@ -24,10 +24,12 @@ jobs:
     steps:
     
       - name: echo out environment
-        run: echo $GITHUB_WORKSPACE
+        run: echo "$GITHUB_WORKSPACE"
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+        with:
+          ref: adf_publish
+        
       - name: Azure Login
         uses: Azure/login@v1
         with:
