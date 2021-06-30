@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"factoryName": {
-			"value": "adf-dev-xfi9012"
+			"value": "adf-test-xfi9012"
 		}
 	}
 }
